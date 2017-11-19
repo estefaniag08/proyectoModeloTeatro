@@ -27,12 +27,12 @@ public class MainDeco {
         CineDecorado dec = null;
         int opcion;
         while (true) {
-            System.out.println("digite el numero correspondiente a como desea organizar la sala de cine");
-            System.out.println("1.preparar para cine 2d");
-            System.out.println("2.preparar para cine 3d");
-            System.out.println("3.preparar para cine 4d");
-            System.out.println("4.preparar para cine 6d");
-            System.out.println("5.Desabilitar el cine");
+            gestor.muestraTexto("digite el numero correspondiente a como desea organizar la sala de cine");
+            gestor.muestraTexto("1.preparar para cine 2d");
+            gestor.muestraTexto("2.preparar para cine 3d");
+            gestor.muestraTexto("3.preparar para cine 4d");
+            gestor.muestraTexto("4.preparar para cine 6d");
+            gesor.muestraTexto("5.Desabilitar el cine");
             opcion = gestor.leerInt();
             switch (opcion) {
                 case 1:
