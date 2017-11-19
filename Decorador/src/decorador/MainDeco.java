@@ -36,23 +36,23 @@ public class MainDeco {
             opcion = gestor.leerInt();
             switch (opcion) {
                 case 1:
-                    gestor.muestraTexto(sala.prepararFuncion());
+                    gestor.muestraTexto(sala.prepararFuncion()); // usa el objeto solo
                     break;
                 case 2:
                     dec = new Cine3d((Cine) sala);
-                    gestor.muestraTexto(dec.prepararFuncion());
+                    gestor.muestraTexto(dec.prepararFuncion());  //usa el objeto decorado
                     break;
                 case 3:
                     dec = new Cine4d((Cine) sala);
-                    gestor.muestraTexto(dec.prepararFuncion());
+                    gestor.muestraTexto(dec.prepararFuncion());  //usa el objeto decorado
                     break;
                 case 4:
                     dec = new Cine6d((Cine) sala);
-                    gestor.muestraTexto(dec.prepararFuncion());
+                    gestor.muestraTexto(dec.prepararFuncion()); //usa el objeto decorado
                     break;
             }
             if(opcion==5){
-                break;
+                break; // sirve para salirse del while(true)
             }
         }
     }
