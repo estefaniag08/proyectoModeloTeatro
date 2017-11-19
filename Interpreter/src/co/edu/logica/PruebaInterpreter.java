@@ -1,28 +1,29 @@
 package co.edu.logica;
 
 import java.util.Scanner;
-
+import gestorFlujoConsola.*;
 public class PruebaInterpreter {
 	public static void main (String args[]){
-		Scanner lectura = new Scanner (System.in);
 		
-		String codigo;
-		double traduccionCodigo;
+		Entrada entradaDatos = new Entrada();	//Objetos del componente
+		Salida salidaDatos = new Salida();
+		String codigo;							//Codigo que ingresa el empleado	
+		double traduccionCodigo;				//Traduccion al codigo ingresado
 		
-		Diccionario dCodigos = new Diccionario();
-		Expresion interpretadorExpresiones;
+		Diccionario dCodigos = new Diccionario();	//Diccionario de codigos
+		Expresion interpretadorExpresiones;			//Expresiones expecificas
 		
-		System.out.println("Por favor escriba el código del producto y el código de la promoción seguido de un guión (XX-XX)");
-		codigo=lectura.nextLine(); 
+		salidaDatos.mostrar("Por favor escriba el código del producto y el código de la promoción seguido de un guión (XX-XX)");
+		codigo=entradaDatos.leer();
 		
-		dCodigos.RecibirCodigo(codigo.toUpperCase());
-		interpretadorExpresiones = new ExpresionFinalPromo();
-		traduccionCodigo=interpretadorExpresiones.interpret(dCodigos);
+		dCodigos.RecibirCodigo(codigo.toUpperCase());					//El diccionario recibe el codigo
+		interpretadorExpresiones = new ExpresionFinalPromo();			//Interpreter
+		traduccionCodigo=interpretadorExpresiones.interpret(dCodigos);	//Traduce el codigo, se inserta el contexto (diccionario)
 		
 		if(traduccionCodigo==0){
-			System.out.println("El código ingresado no es válido");
+			salidaDatos.mostrar("El código ingresado no es válido");
 		} else {
-			System.out.println("El precio total del producto ingresado es de:" +traduccionCodigo);
+			salidaDatos.mostrar("El precio total del producto es de:" +traduccionCodigo);
 		}
 		
 		
