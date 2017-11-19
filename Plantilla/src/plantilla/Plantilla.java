@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package plantilla;
-import tiquetes.*;
+import combos.ComboTemporada;
+import combos.Combo;
+import combos.ComboPareja;
+import combos.ComboDeluxe;
 import gestor.*;
 /**
  *
