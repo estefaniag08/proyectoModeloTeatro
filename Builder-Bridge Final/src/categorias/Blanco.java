@@ -1,11 +1,7 @@
 package categorias;
-
 public class Blanco extends CategoriaPan {
-
 	@Override
-	public String mostrarEspecificacion() {
-		
+	public String mostrarEspecificacion() {	
 		return "tradicional, pan Blanco";
 	}
-
 }

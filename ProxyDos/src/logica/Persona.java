@@ -6,12 +6,12 @@ package logica;
  * @author Victoria
  *
  */
+
 public class Persona {
 	private String nombre;
 	private int edad;
 	private String apellido;
 	
-
 	public String getNombre() {
 		return nombre;
 	}
@@ -29,6 +29,5 @@ public class Persona {
 	}
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
-	}
-	
+	}	
 }

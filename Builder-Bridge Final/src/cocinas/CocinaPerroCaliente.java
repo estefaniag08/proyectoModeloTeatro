@@ -1,5 +1,4 @@
 package cocinas;
-
 import comidas.Comida;
 import comidas.PerroCaliente;
 import ingredientes.Embutido;
@@ -29,5 +28,4 @@ public class CocinaPerroCaliente extends Cocina {
 		// TODO Auto-generated method stub
 		return new PerroCaliente();
 	}
-
 }
