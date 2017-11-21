@@ -4,20 +4,22 @@
  * and open the template in the editor.
  */
 package combos;
+
 /**
  *
  * @author zachl
  */
-public abstract class Combo{
-    public String obtenerInfo(){
-        return          "El combo que selecciono trae lo siguiente:" +"\n" +        
-                        comida() + "\n" +
-        		bebida()+ "\n" +
-        		"Adicionalmente viene con un " +complemento() + "\n" +
-        		"Precio del combo: " +precio()+ "\n";
-    }
-    public abstract String comida();
-    public abstract String bebida();
-    public abstract String complemento();
-    public abstract String precio();
+public abstract class Combo {
+	public String obtenerInfo() {
+		return "El combo que selecciono trae lo siguiente:" + "\n" + comida() + "\n" + bebida() + "\n"
+				+ "Adicionalmente viene con un " + complemento() + "\n" + "Precio del combo: " + precio() + "\n";
+	}
+
+	public abstract String comida();
+
+	public abstract String bebida();
+
+	public abstract String complemento();
+
+	public abstract String precio();
 }

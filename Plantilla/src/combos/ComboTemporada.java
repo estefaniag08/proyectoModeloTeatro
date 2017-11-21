@@ -4,26 +4,27 @@
  * and open the template in the editor.
  */
 package combos;
+
 /**
  *
  * @author zachl
  */
 public class ComboTemporada extends Combo {
-    private final double precio = 25000;
+	private final double precio = 25000;
 
-    public String comida() {
-        return "Hamburguesa"+"\n" +
-               "Palomitas Medianas";
-    }
-    public String bebida() {
-        return "Gaseosa mediana";
-    }
+	public String comida() {
+		return "Hamburguesa" + "\n" + "Palomitas Medianas";
+	}
 
-    public String complemento() {
-        return "Muñeco de temporada";
-    }
+	public String bebida() {
+		return "Gaseosa mediana";
+	}
 
-    public String precio() {
-        return (String.valueOf(precio));
-    }
+	public String complemento() {
+		return "Muñeco de temporada";
+	}
+
+	public String precio() {
+		return (String.valueOf(precio));
+	}
 }
