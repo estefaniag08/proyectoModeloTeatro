@@ -25,7 +25,7 @@ public class Bandeja extends ProductoTeatro {
     }
     @Override
     public void sacarProducto(){
-        producto.remove(producto.size());
+        producto.remove(producto.size()-1);
     }
     public ProductoTeatro obtenerProducto(int eleccion){
         return producto.get(eleccion);
