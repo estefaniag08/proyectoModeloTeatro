@@ -4,8 +4,7 @@ import ingredientes.Embutido;
 import ingredientes.Pan;
 import ingredientes.Queso;
 
-public class Comida {
-	
+public class Comida {	
 	protected Pan pan;
 	protected Embutido embutido;
 	protected Queso queso;
@@ -28,6 +27,4 @@ public class Comida {
 	public void setQueso(Queso queso) {
 		this.queso = queso;
 	}
-	
-	
 }

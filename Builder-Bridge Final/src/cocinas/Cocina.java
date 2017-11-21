@@ -2,9 +2,7 @@ package cocinas;
 
 import comidas.Comida;
 
-import ingredientes.Embutido;
-import ingredientes.Pan;
-import ingredientes.Queso;
+import ingredientes.*;
 
 public abstract class Cocina {
 	public abstract Pan prepararPan ();

@@ -20,7 +20,6 @@ public class Director {
  * @param catE
  * @return
  */
-	
 	public Comida preparar(int opcion,CategoriaPan catP, CategoriaQueso catQ, CategoriaEmbutido catE) {
 
 		switch (opcion) { // llama a la cocina correspondiente segun la eleccion del cliente
@@ -59,6 +58,5 @@ public class Director {
 				pan.utilizar()+ "\n"+
 				embutido.utilizar()+ "\n"+
 				queso.utilizar();
-		
 	}
 }
