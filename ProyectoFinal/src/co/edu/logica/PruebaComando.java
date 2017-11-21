@@ -16,9 +16,12 @@ public class PruebaComando {
 	}
 	/**Inicializa los comandos*/
 	public void inicializarComandos(){
-		listaComando.add(new ComandoInterpreter());
-		listaComando.add(new ComandoVisitor());
-		listaComando.add(new ComandoBuilderBridge());
+		listaComando.add(new ComandoInterpreter());		//0
+		listaComando.add(new ComandoVisitor());			//1
+		listaComando.add(new ComandoBuilderBridge());	//2
+		listaComando.add(new ComandoComposite());		//3
+		listaComando.add(new ComandoPlantilla());		//4
+		listaComando.add(new ComandoStrategy());		//5
 	}
 	
 	

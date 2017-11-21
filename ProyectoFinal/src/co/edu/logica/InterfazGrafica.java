@@ -77,7 +77,7 @@ public class InterfazGrafica {
 		lblFondo_3 = new JLabel("");
 		lblFondo = new JLabel("");
 		btnPreparacinComida = new JButton("Preparaci\u00F3n comida");
-		btnPagoDeCuenta = new JButton("Pago de cuenta");
+		btnPagoDeCuenta = new JButton("Pago sin combo");
 		btnArmarCombo = new JButton("Armar Combo");
 		btnRevisarPrecioPor = new JButton("Precio por c\u00F3digo");
 		lblGestinComida = new JLabel("GESTI\u00D3N COMIDA");
@@ -132,10 +132,20 @@ public class InterfazGrafica {
 		
 		btnPagoDeCuenta.setFont(new Font("Agency FB", Font.PLAIN, 20));
 		btnPagoDeCuenta.setBounds(78, 201, 163, 37);
+		btnPagoDeCuenta.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				llamarComando(3);
+			}
+		});
 		cPrincipal.add(btnPagoDeCuenta);
 		
 		btnArmarCombo.setFont(new Font("Agency FB", Font.PLAIN, 20));
 		btnArmarCombo.setBounds(316, 112, 163, 37);
+		btnArmarCombo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				llamarComando(4);
+			}
+		});
 		cPrincipal.add(btnArmarCombo);	
 		
 		btnRevisarPrecioPor.addActionListener(new ActionListener() {
@@ -174,6 +184,11 @@ public class InterfazGrafica {
 		
 		btnMediosDePago.setFont(new Font("Agency FB", Font.PLAIN, 20));
 		btnMediosDePago.setBounds(71, 194, 163, 37);
+		btnMediosDePago.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				llamarComando(5);
+			}
+		});
 		bPrincipal.add(btnMediosDePago);
 		
 		btnPromocionesBoleta.setFont(new Font("Agency FB", Font.PLAIN, 20));
