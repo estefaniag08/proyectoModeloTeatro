@@ -46,6 +46,7 @@ public class PruebaIterador {
 			iterador = (IteradorBase) sala.ObtenerIterator();
 
 		}
+		salida.mostrar("Los mejores asientos para esa funcion son:");
 		while (iterador.QuedanElementos()) {
 			salida.mostrar(iterador.Siguiente());
 		}
