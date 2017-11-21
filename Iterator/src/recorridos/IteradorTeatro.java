@@ -27,7 +27,7 @@ public class IteradorTeatro implements Iterador{
 			return 0;
 
 		else
-			return this.sillas[++posicionActual];
+			return this.sillas[posicionActual+=3];
 	}
 
 	public boolean QuedanElementos() {

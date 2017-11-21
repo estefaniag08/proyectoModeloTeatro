@@ -27,7 +27,7 @@ public class IteradorConcierto implements Iterador{
 			return 0;
 
 		else
-			return this.sillas[++posicionActual];
+			return this.sillas[posicionActual+=10];
 	}
 
 	public boolean QuedanElementos() {

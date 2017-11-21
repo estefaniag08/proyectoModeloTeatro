@@ -27,7 +27,7 @@ public class IteradorCine implements Iterador {
 			return 0;
 
 		else
-			return this.sillas[++posicionActual];
+			return this.sillas[posicionActual+=5];
 	}
 
 	public boolean QuedanElementos() {

@@ -19,33 +19,23 @@ public class PruebaIterador {
 		switch (opcion) {
 		case 1:
 			sala = new SalaTeatro();
-			for (int contador = 0; contador < 50; contador++) {
-				sala.insertarValores(contador + 1, contador);
-			}
-			iterador = (IteradorTeatro) sala.ObtenerIterator();
 			break;
 		case 2:
 			sala = new SalaCine();
-			for (int contador = 0; contador < 50; contador++) {
-				sala.insertarValores(contador + 1, contador);
-			}
-			iterador = (IteradorCine) sala.ObtenerIterator();
+			
 			break;
 		case 3:
 			sala = new SalaConcierto();
-			for (int contador = 0; contador < 50; contador++) {
-				sala.insertarValores(contador + 1, contador);
-			}
-			iterador = (IteradorConcierto) sala.ObtenerIterator();
+			
 			break;
 		default:
 			sala = new SalaBase();
-			for (int contador = 0; contador < 50; contador++) {
-				sala.insertarValores(contador + 1, contador);
-			}
-			iterador = (IteradorBase) sala.ObtenerIterator();
-
 		}
+		for (int contador = 0; contador < 50; contador++) {
+			sala.insertarValores(contador + 1, contador);
+		}
+		
+		iterador =  sala.ObtenerIterator();
 		salida.mostrar("Los mejores asientos para esa funcion son:");
 		while (iterador.QuedanElementos()) {
 			salida.mostrar(iterador.Siguiente());
