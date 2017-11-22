@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package estadoteatro;
+package cadena;
 
-import salas.*;
+import banco.*;
 import gestorFlujoConsola.*;
 
 /**
  *
  * @author zachl
  */
-public class PruebaEstado {
+public class Cadena {
 
 	/**
 	 * @param args
@@ -21,15 +21,15 @@ public class PruebaEstado {
 	public static void main(String[] args) {
 		Entrada entrada = new Entrada();
 		Salida salida = new Salida();
-		AsignacinacionDeSillas silla = new AsignacinacionDeSillas();
-		int opcion;
-		salida.mostrar("Seleccione el tipo de asiento que se adecue a sus necesidades");
-		salida.mostrar("1. Normal");
-		salida.mostrar("2. Para discapacitados");
-		salida.mostrar("3. En el mejor sitio");
-		opcion = entrada.leerEntero();
-		silla.reservarSilla(opcion);
-		silla.pedirReserva();
+		String reclamo;
+		salida.mostrar("Bienvenido al centro de quejas y reclamos, porfavor escriba el tipo de reclamo que tiene");
+		reclamo = entrada.leer();
+		AsistenteCine asisCine = new AsistenteCine();
+		GerenteCine gerCine = new GerenteCine();
+		JefeCine jefCine = new JefeCine();
+		asisCine.setNext(gerCine);
+		gerCine.setNext(jefCine);
+		asisCine.queja(reclamo);
 	}
 
 }
