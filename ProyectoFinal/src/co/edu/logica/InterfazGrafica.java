@@ -37,8 +37,7 @@ public class InterfazGrafica {
 	private JPanel panelSalasEventos;
 	private JPanel sPrincipal;
 	private JButton btnSalasDeCine;
-	private JButton btnEstadoSalasDe;
-	private JButton btnCancelacinReservas;
+	private JButton btnCine;
 	private JButton btnSillasVip;
 	private JButton btnQuejasYReclamos;
 	private JButton btnBaseDeDatos;
@@ -51,6 +50,7 @@ public class InterfazGrafica {
 	private JButton btnGeneracinDeBoleta;
 	private JButton btnMediosDePago;
 	private JButton btnPromocionesBoleta;
+	private JButton btnEstadoCliente;
 	
 	//Constructor
 	public InterfazGrafica() {
@@ -62,7 +62,6 @@ public class InterfazGrafica {
 	}
 	/**Inicializa los elementos de la interfaz grafica*/
 	private void initialize() {
-		ejecucionComando.inicializarComandos();	//Inicializa todos los comandos disponibles
 		
 		frame = new JFrame();
 		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
@@ -88,14 +87,14 @@ public class InterfazGrafica {
 		panelSalasEventos = new JPanel();
 		lblGestinBoletas = new JLabel("GESTI\u00D3N BOLETAS");
 		sPrincipal = new JPanel();
-		btnSalasDeCine = new JButton("Salas de cine");
-		btnEstadoSalasDe = new JButton("Estado salas de cine");
+		btnSalasDeCine = new JButton("Historial salas");
 		lblFondo_4 = new JLabel("");
 		btnQuejasYReclamos = new JButton("Quejas y reclamos");
-		btnCancelacinReservas = new JButton("Cancelaci\u00F3n reservas");
+		btnCine = new JButton("Funciones Cine");
 		btnSillasVip = new JButton("Sillas VIP");
 		lblGestinSalasY = new JLabel("GESTI\u00D3N SALAS Y EVENTOS");
 		btnBaseDeDatos = new JButton("Base de datos");
+		btnEstadoCliente = new JButton("Estado Cliente");
 		lblGestinAtencinAl = new JLabel("GESTI\u00D3N ATENCI\u00D3N AL CLIENTE");
 		setCaracteristicas();
 	}
@@ -176,10 +175,20 @@ public class InterfazGrafica {
 				
 		btnPagoMonedaExtranjera.setBounds(71, 112, 163, 37);
 		bPrincipal.add(btnPagoMonedaExtranjera);
+		btnPagoMonedaExtranjera.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				llamarComando(13);
+			}
+		});
 		btnPagoMonedaExtranjera.setFont(new Font("Agency FB", Font.PLAIN, 20));
 		
 		btnGeneracinDeBoleta.setFont(new Font("Agency FB", Font.PLAIN, 20));
 		btnGeneracinDeBoleta.setBounds(308, 112, 163, 37);
+		btnGeneracinDeBoleta.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				llamarComando(6);
+			}
+		});
 		bPrincipal.add(btnGeneracinDeBoleta);
 		
 		btnMediosDePago.setFont(new Font("Agency FB", Font.PLAIN, 20));
@@ -217,16 +226,22 @@ public class InterfazGrafica {
 		sPrincipal.setLayout(null);
 		
 		btnSalasDeCine.setFont(new Font("Agency FB", Font.PLAIN, 20));
-		btnSalasDeCine.setBounds(86, 107, 163, 37);
+		btnSalasDeCine.setBounds(203, 106, 163, 37);
+		btnSalasDeCine.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				llamarComando(7);
+			}
+		});
 		sPrincipal.add(btnSalasDeCine);
 		
-		btnEstadoSalasDe.setFont(new Font("Agency FB", Font.PLAIN, 20));
-		btnEstadoSalasDe.setBounds(323, 107, 163, 37);
-		sPrincipal.add(btnEstadoSalasDe);
-		
-		btnCancelacinReservas.setFont(new Font("Agency FB", Font.PLAIN, 20));
-		btnCancelacinReservas.setBounds(86, 189, 163, 37);
-		sPrincipal.add(btnCancelacinReservas);
+		btnCine.setFont(new Font("Agency FB", Font.PLAIN, 20));
+		btnCine.setBounds(86, 189, 163, 37);
+		btnCine.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				llamarComando(9);
+			}
+		});
+		sPrincipal.add(btnCine);
 		
 		
 		lblGestinSalasY.setHorizontalAlignment(SwingConstants.CENTER);
@@ -236,6 +251,11 @@ public class InterfazGrafica {
 		
 		btnSillasVip.setFont(new Font("Agency FB", Font.PLAIN, 20));
 		btnSillasVip.setBounds(323, 189, 163, 37);
+		btnSillasVip.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				llamarComando(10);
+			}
+		});
 		sPrincipal.add(btnSillasVip);
 		
 		lblFondo_4.setIcon(new ImageIcon(InterfazGrafica.class.getResource("/Recursos/Fondot.png")));
@@ -253,11 +273,30 @@ public class InterfazGrafica {
 		
 		btnQuejasYReclamos.setFont(new Font("Agency FB", Font.PLAIN, 20));
 		btnQuejasYReclamos.setBounds(85, 129, 163, 37);
+		btnQuejasYReclamos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				llamarComando(12);
+			}
+		});
 		aPrincipal.add(btnQuejasYReclamos);
 		
 		btnBaseDeDatos.setFont(new Font("Agency FB", Font.PLAIN, 20));
 		btnBaseDeDatos.setBounds(322, 129, 163, 37);
+		btnBaseDeDatos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				llamarComando(8);
+			}
+		});
 		aPrincipal.add(btnBaseDeDatos);
+		
+		btnEstadoCliente.setFont(new Font("Agency FB", Font.PLAIN, 20));
+		btnEstadoCliente.setBounds(208, 194, 163, 37);
+		btnEstadoCliente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				llamarComando(11);
+			}
+		});
+		aPrincipal.add(btnEstadoCliente);
 		
 		lblGestinAtencinAl.setHorizontalAlignment(SwingConstants.CENTER);
 		lblGestinAtencinAl.setFont(new Font("Gabriola", Font.BOLD, 34));
@@ -273,5 +312,4 @@ public class InterfazGrafica {
 		frame.getContentPane().add(lblFondo);
 		
 	}
-	
 }
